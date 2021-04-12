@@ -10,3 +10,16 @@ dotnet new angular --name QuickBuy.Web
 dotnet sln add "QuickBuy.Dominio\QuickBuy.Dominio.csproj"
 dotnet sln add "QuickBuy.Repository\QuickBuy.Repository.csproj"
 dotnet sln add "QuickBuy.Web\QuickBuy.Web.csproj"
+------------------------------------------------------------------------
+************************************************************************
+
+Rodar a Aplicação pelo CMD Prompt do windows
+
+- Internamente na pasta ClientApp executar os comandos
+
+ng build
+ng serve
+
+ou npm start
+
+Logo após executar o projeto no Visual Studio
