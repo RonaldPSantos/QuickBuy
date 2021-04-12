@@ -1,0 +1,12 @@
+Comandos de inicialização do projeto .NET Core com Angular
+
+dotnet --version
+dotnet --version-sdks
+dotnet new globaljson --sdkversion 2.2.202
+dotnet new sln --name QuickBuy
+dotnet new classlib --name QuickBuy.Dominio
+dotnet new classlib --name QuickBuy.Repository
+dotnet new angular --name QuickBuy.Web
+dotnet sln add "QuickBuy.Dominio\QuickBuy.Dominio.csproj"
+dotnet sln add "QuickBuy.Repository\QuickBuy.Repository.csproj"
+dotnet sln add "QuickBuy.Web\QuickBuy.Web.csproj"
