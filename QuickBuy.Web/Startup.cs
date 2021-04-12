@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QuickBuy.Repository.Context;
 
 namespace QuickBuy.Web
 {
@@ -14,13 +14,19 @@ namespace QuickBuy.Web
 
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder();
+            builder.AddJsonFile("config.json", optional: false, reloadOnChange: true);
+            Configuration = builder.Build();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            var connectionString = Configuration.GetConnectionString("QuickBuyDB");
+            services.AddDbContext<QuickBuyContext>(option => 
+                                                   option.UseMySql(connectionString, m => m.MigrationsAssembly("QuickBuy.Repository")));
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

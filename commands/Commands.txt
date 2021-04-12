@@ -23,3 +23,11 @@ ng serve
 ou npm start
 
 Logo após executar o projeto no Visual Studio
+
+
+------------------------------------------------------------------------
+************************************************************************
+
+Install EF Core (Solução repositorio)
+1- Pomelo.EntityFrameworkCore.Mysql
+2- Proxies
