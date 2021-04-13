@@ -1,4 +1,6 @@
-﻿namespace QuickBuy.Dominio.Entities
+﻿using System.Collections.Generic;
+
+namespace QuickBuy.Dominio.Entities
 {
     public class User : Entity
     {
@@ -8,6 +10,7 @@
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public virtual ICollection<Order> Orders { get; set; }
 
         public override void Validate()
         {

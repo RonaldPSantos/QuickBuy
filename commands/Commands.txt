@@ -31,3 +31,10 @@ Logo após executar o projeto no Visual Studio
 Install EF Core (Solução repositorio)
 1- Pomelo.EntityFrameworkCore.Mysql
 2- Proxies
+
+------------------------------------------------------------------------
+************************************************************************
+Migrations
+
+Add-Migrations PrimeiraVersaoBase
+Update-Database -Verbose

@@ -8,11 +8,13 @@ namespace QuickBuy.Dominio.Entities
         public int ProducId { get; set; }
         public int Amout { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
-
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (ProducId == 0)
+                AddReview("Não foi identificado qual a referência do produto");
+
+            if (Amout == 0)
+                AddReview("Quantidade não foi informado");
         }
     }
 }

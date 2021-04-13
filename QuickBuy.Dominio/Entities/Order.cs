@@ -10,6 +10,7 @@ namespace QuickBuy.Dominio.Entities
         public int Id { get; set; }
         public DateTime DateOrder { get; set; }
         public int UserId { get; set; }
+        public virtual User User { get; set; }
         public DateTime DeliveryForecast { get; set; }
         public string PostalCode { get; set; }
         public string State { get; set; }
@@ -18,9 +19,9 @@ namespace QuickBuy.Dominio.Entities
         public int Number { get; set; }
         public int PaymentMethodId { get; set; }
 
-        public PaymentMethod paymentMethod { get; set; }
+        public virtual PaymentMethod paymentMethod { get; set; }
 
-        public ICollection<ItemOrder> ItemsOrder { get; set; }
+        public virtual ICollection<ItemOrder> ItemsOrder { get; set; }
 
         public override void Validate()
         {
