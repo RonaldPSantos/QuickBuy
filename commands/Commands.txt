@@ -38,3 +38,8 @@ Migrations
 
 Add-Migrations PrimeiraVersaoBase
 Update-Database -Verbose
+
+------------------------------------------------------------------------
+************************************************************************
+TypeScript
+- Annotations
