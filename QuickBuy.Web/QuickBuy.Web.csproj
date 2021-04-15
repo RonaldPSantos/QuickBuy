@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\model\User.ts" />
     <None Remove="ClientApp\src\app\Product\product.component.ts" />
     <None Remove="ClientApp\src\app\User\Login\login.component.ts" />
   </ItemGroup>
@@ -35,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\model\User.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Product\product.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\User\Login\login.component.ts" />
   </ItemGroup>
